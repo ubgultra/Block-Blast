@@ -27,9 +27,9 @@
                 <meta charset="utf-8"/>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <title>Block Blast Puzzle</title>
-                <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/TemplateData/favicon.ico"/>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/TemplateData/style.css"/>
-                <link rel="manifest" href="https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/manifest.webmanifest"/>
+                <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
+                <link rel="stylesheet" href="TemplateData/style.css"/>
+                <link rel="manifest" href="manifest.webmanifest"/>
             </head>
             <body>
                 <div id="unity-container">
@@ -44,11 +44,9 @@
                 </div>
                 
                 <script>
-                    window.addEventListener("load", function () {
-                        if ("serviceWorker" in navigator) {
-                            navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/ServiceWorker.js");
-                        }
-                    });
+                    navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/ServiceWorker.js")
+                    .then(reg => console.log("Service Worker registered:", reg))
+                    .catch(err => console.warn("Service Worker registration failed:", err));
                 </script>
             </body>
         </document>
