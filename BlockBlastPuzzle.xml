@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs title="Block Blast Puzzle" description="A puzzle game" author="reun" author_email="support@reun.com"/>
+    <Content type="html">
+        <![CDATA[
+        <document>
+            <head>
+                <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895"
+                        crossorigin="anonymous"></script>
+                
+                <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-CC4ZKKC8EF');
+                    let displayMode = 'browser';
+                    let isPwa = false;
+                    const mqStandAlone = '(display-mode: fullscreen)';
+                    if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
+                        displayMode = 'fullscreen';
+                        isPwa = true;
+                    }
+                    gtag('event', 'pwa_check', {'pwa': isPwa});
+                </script>
+                
+                <meta charset="utf-8"/>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <title>Block Blast Puzzle</title>
+                <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
+                <link rel="stylesheet" href="TemplateData/style.css"/>
+                <link rel="manifest" href="manifest.webmanifest"/>
+            </head>
+            <body>
+                <div id="unity-container">
+                    <canvas id="unity-canvas" width="1080" height="1920" tabindex="-1"></canvas>
+                    <div id="unity-loading-bar">
+                        <div id="unity-logo"></div>
+                        <div id="unity-progress-bar-empty">
+                            <div id="unity-progress-bar-full"></div>
+                        </div>
+                    </div>
+                    <div id="unity-warning"></div>
+                </div>
+                
+                <script>
+                    window.addEventListener("load", function () {
+                        if ("serviceWorker" in navigator) {
+                            navigator.serviceWorker.register("ServiceWorker.js");
+                        }
+                    });
+                </script>
+            </body>
+        </document>
+        ]]>
+    </Content>
+</Module>
