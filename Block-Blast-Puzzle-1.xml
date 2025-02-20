@@ -44,9 +44,13 @@
                 </div>
                 
                 <script>
-                    navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/ubgultra/Block-Blast@main/ServiceWorker.js")
-                    .then(reg => console.log("Service Worker registered:", reg))
-                    .catch(err => console.warn("Service Worker registration failed:", err));
+                    if (!window.location.origin.includes("googleusercontent.com")) {
+                        navigator.serviceWorker.register("/ServiceWorker.js")
+                        .then(reg => console.log("Service Worker registered:", reg))
+                        .catch(err => console.warn("Service Worker registration failed:", err));
+                    } else {
+                        console.warn("Service Worker not registered: Google OpenSocial does not support cross-origin Service Workers.");
+                    }
                 </script>
             </body>
         </document>
