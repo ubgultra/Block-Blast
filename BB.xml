@@ -1,27 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document>
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="My Block Blast Gadget"
+                 description="An example EmulatorJS widget"
+                 author="Your Name"
+                 author_email="your.email@example.com">
+    </ModulePrefs>
+
+    <Content type="html">
+        <![CDATA[
+<html>
     <head>
-        <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895"
-                crossorigin="anonymous"/>
-        
-        <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"/>
-        <script>
-            <![CDATA[
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CC4ZKKC8EF');
-            let displayMode = 'browser';
-            let isPwa = false;
-            const mqStandAlone = '(display-mode: fullscreen)';
-            if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
-                displayMode = 'fullscreen';
-                isPwa = true;
-            }
-            gtag('event', 'pwa_check', {'pwa': isPwa});
-            ]]>
-        </script>
-        
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Block Blast Puzzle</title>
@@ -51,4 +39,8 @@
             ]]>
         </script>
     </body>
-</document>
+    </html>
+        ]]>
+    </Content>
+</Module>
+
